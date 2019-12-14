@@ -116,7 +116,7 @@ def main():
         turma.ParseFromString(file.read())
 
     for aluno in turma.alunos:
-        print("O aluno {0} possui {1} telefone(s) cadastrado(s).".format(aluno.nome, len(aluno.telefones)))
+        print("O aluno {0} possui {1} telefone(s).".format(aluno.nome, len(aluno.telefones)))
 
 
 if __name__ == "__main__":
