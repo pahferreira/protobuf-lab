@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package laboratorio;
+
+message Telefone {
+    enum TipoTelefone {
+        CELULAR = 0;
+        RESIDENCIAL = 1;
+        TRABALHO = 2;
+    }
+
+    string telefone = 1;
+    TipoTelefone tipo = 2;
+}
+
+message Aluno {
+	string nome = 1;
+	string matricula = 2;
+	repeated Telefone telefones = 3;
+}
+
+message Turma {
+    repeated Aluno alunos = 1;
+}
+
